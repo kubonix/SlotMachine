@@ -1,7 +1,22 @@
+import random
+
 MAX_LINES = 3   #liczba linii którą można obstawić w jednorękim bandycie
                 #capsami = wartość 
 MAX_BET = 100
-MIN_BET = 1                
+MIN_BET = 1    
+
+ROWS = 3        #ustawienia maszyny losującej, liczba rzędów
+COLS = 3        #liczba kolumn
+
+symbol_count = {    #dictionary, zbiór symboli które będą losowane
+    'A': 2,
+    'B': 4,
+    'C': 6,
+    'D': 8,
+}
+
+#def get_slot_machine_spin(rows, cols, symbols):
+
 
 #collecting user input
 def deposit():
@@ -25,7 +40,7 @@ def get_number_of_lines():
             if 1 <= lines <= MAX_LINES:
                 break            #jeśli numer jest >0 to break zamyka loop'a
             else:
-                print('Wprowadź poprawną ilość linii (1-' + str(MAX_LINES) + ')?')        
+                print('Wprowadź poprawną ilość linii (1-' + str(MAX_LINES) + ')')        
         else:
             print('Proszę wprowadzić numer.')
     return lines          
@@ -59,4 +74,4 @@ def main():                     #funkcja która uruchomi gre
     print(
         f'Obstawiasz ${bet} na {lines} linie. Cały zakład to {total_bet}.')
 
-main()    
+main()
