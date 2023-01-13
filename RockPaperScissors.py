@@ -44,7 +44,29 @@ while True:
     print(f"You {user_wins} : {computer_wins} Computer")          
 
     if computer_wins >= 3 or user_wins >= 3:
-        break
+        print("----------------------------")
+        print(f"You won             {user_wins} times.")
+        print(f"The computer won    {computer_wins} times.")
+        print(f"Draws               {draws} times.\n")
+
+        if user_wins > computer_wins:
+            print("You are better than the computer!")
+        elif user_wins < computer_wins:
+            print("AI defeted You!")    
+        else:
+            print("Draw game!") 
+        break    
+    else:
+        continue             
+
+# if input("Wanna play again (Y/N) ? ").lower() == "y":
+#     print("OK! Next round!")
+#     continue
+# else:
+#     break
+
+
+
 #    if user_input == "rock" and computer_pick == "scissors":
 #        print("You won!")
 #        user_wins += 1
@@ -62,16 +84,6 @@ while True:
 #     else:
 #        print("You lost!")
 #        computer_wins += 1
-print("----------------------------")
-print(f"You won             {user_wins} times.")
-print(f"The computer won    {computer_wins} times.")
-print(f"Draws               {draws} times.\n")
-
-if user_wins > computer_wins:
-    print("You are better than the computer!")
-elif user_wins < computer_wins:
-    print("AI defeted You!")    
-else:
-    print("Draw game!")    
+  
 
 print("Thanks for the game!\n")
