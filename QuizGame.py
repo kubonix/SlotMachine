@@ -2,8 +2,8 @@ print('Welcome to my Quiz!')
 
 playing = input('Do you want to play? ')
 
-if playing.lower() != 'yes':
-    quit()
+if playing.lower() != 'yes':    #.lower sprawia że wszystkie symbole w stringu są zmniejszone do małej litery
+    quit()                      #nawet przy funkcji input() gdy w konsoli wpisze się duże litery
 print("OK! Let's play") 
 
 score = 0
@@ -29,5 +29,11 @@ if answer.lower() == "random access memory":
 else:
     print('Incorrect!')            
 
-print("You got " + str(score) + " questions correct!")    
-print("You got " + str((score / 3.0) * 100) + "%")
+if score == 0:
+    print("All questions incorrect! You need to learn more!")
+elif score == 1:
+    print("You got " + str(score) + " question correct!")
+else:    
+    print("You got " + str(score) + " questions correct!")    
+
+print("You got " + str((score / 3) * 100) + "%")
